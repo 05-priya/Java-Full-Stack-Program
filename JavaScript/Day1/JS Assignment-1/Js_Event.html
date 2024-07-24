@@ -4,8 +4,52 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Events</title>
+
+    <style>
+        body{
+            width: 90%;
+            height: 90vh;
+        }
+        #cont{
+           border: 2px solid gray;
+           border-radius: 10px;
+           width:30%;
+           margin-top:150px;
+           padding:30px;
+           font-size: 23px;
+           
+        }
+        .over{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            
+        }
+    </style>
+
+
+
+
 </head>
-<body>
-    
+<body onclick="reload()">
+<div class="over">
+<div id="cont">
+<p>Press a key in the input field:</p>
+
+<input type="text" onkeydown="myFunction()">
+
+<p id="result"></p>
+</div></div>
+
+<script>
+function myFunction() {
+  document.getElementById("result").innerHTML = "<font><b>You pressed a key</b></font> ";
+  document.body.style.backgroundColor="bisque";
+}
+function reload(){
+    document.getElementById("result").innerHTML =" ";
+    document.body.style.backgroundColor="white";
+}
+</script>
 </body>
 </html>
