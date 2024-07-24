@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prime_No</title>
+    <script>
+        function prime_cal(){
+            var a=parseInt(document.getElementById("n1").value);
+           
+            if(a==0 || a==1){
+                document.getElementById("result_prime").innerHTML=a+"<b> is a neither prime nor composite";
+            }
+
+            else{
+            var count=0;
+            for(let i=2;i<a;i++){
+                if(a%i==0){
+                    count++;
+                }
+            }
+            
+            if(count==0){
+                document.getElementById("result_prime").innerHTML=a+"<b> is a Prime Number";
+            }
+            else{
+                document.getElementById("result_prime").innerHTML=a+"<b> is not a Prime Number";
+            }
+        }
+        }
+    </script>
+
+<style>
+    #cont{
+       border: 2px solid gray;
+       border-radius: 10px;
+       width:30%;
+       margin-top:150px;
+       padding:30px;
+       
+    }
+    .over{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+</style>
+
+
+
+</head>
+<body>
+    <div class="over">
+        <div id="cont">
+    Enter the Value: <input type="text" required id="n1">
+    <br><br>
+    <button onclick="prime_cal()">Submit</button>
+    <br><br>
+    <div id="result_prime"></div>
+</div></div>
+</body>
+</html>

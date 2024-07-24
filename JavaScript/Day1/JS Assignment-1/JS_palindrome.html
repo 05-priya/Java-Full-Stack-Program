@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Palindrome</title>
+    <script>
+        function palindrome(){
+        let a = document.getElementById("s1").value;
+        let str=a.length;
+        let str_rev=a.split('').reverse().join('');
+        if(a==str_rev){
+        document.getElementById("result_palin").innerHTML=a+"<b> is a palindrome string";
+        }
+        else{
+            document.getElementById("result_palin").innerHTML=a+"<b> is not a palindrome string";
+        }
+        }
+    </script>
+    <style>
+        #cont{
+           border: 2px solid gray;
+           border-radius: 10px;
+           width:30%;
+           margin-top:150px;
+           padding:30px;
+           
+        }
+        .over{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+
+
+
+
+</head>
+<body>
+    <div class="over">
+    <div id="cont">
+    Enter the value: <input type="text" required id="s1">
+    <br><br>
+    <button onclick="palindrome()">Submit</button>
+    <br><br>
+    <div id="result_palin"></div>
+</div></div>
+</body>
+</html>

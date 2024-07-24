@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String Function</title>
+    <script>
+        function String_length(){
+            let a =document.getElementById("s1").value;
+            let len=a.length;
+            document.getElementById("result_str").innerHTML="<b> String Length is"+len;
+
+        }
+
+        function String_charAt(){
+            let a =document.getElementById("s1").value;
+            var b=parseInt(document.getElementById("n1").value);
+            let str=a.charAt(b);
+            document.getElementById("result_char").innerHTML=b+" <b>index char is: "+str;
+        }
+
+        function String_slice(){
+
+            let a =document.getElementById("s1").value;
+            var b=parseInt(document.getElementById("n2").value);
+            var c=parseInt(document.getElementById("n3").value);
+            let str=a.slice(b,c);
+            document.getElementById("result_slice").innerHTML=" <b>String slice: "+str;
+        }
+
+        function String_sub(){
+
+          let a =document.getElementById("s1").value;
+          var b=parseInt(document.getElementById("n4").value);
+          var c=parseInt(document.getElementById("n5").value);
+          let str=a.substring(b,c);
+          document.getElementById("result_sub").innerHTML=" <b>Substring: "+str;
+}
+          function String_str(){
+          
+          let a =document.getElementById("s1").value;
+          var b=parseInt(document.getElementById("n6").value);
+          var c=parseInt(document.getElementById("n7").value);
+          let str=a.substr(b,c);
+          document.getElementById("result_substr").innerHTML="<b>Substr: "+str;
+          }
+
+          function String_upper(){
+          
+          let a =document.getElementById("s1").value;
+          let str=a.toUpperCase();
+          
+          document.getElementById("result_upper").innerHTML="<b>UpperCase: "+str;
+          }
+
+          function String_lower(){
+          let a =document.getElementById("s1").value;
+          let str=a.toLowerCase();
+          document.getElementById("result_lower").innerHTML="<b>lowerCase: "+str;
+          }
+
+          function String_concat(){
+          let a =document.getElementById("s1").value;
+          let b =document.getElementById("s2").value;
+          let str=a.concat(b);
+          document.getElementById("result_concat").innerHTML="<b>Concat: "+str;
+          }
+
+          
+          function String_trim(){
+          let a =document.getElementById("s1").value;
+          let str=a.trim();
+          document.getElementById("result_trim").innerHTML="<b>To trim a string: "+str;
+          }
+
+          function String_trim_start(){
+          let a =document.getElementById("s1").value;
+          let str=a.trimStart();
+          var str1=str.length;
+          document.getElementById("result_trim_start").innerHTML="<b>To trim a string: "+str1;
+          }
+
+          function String_trim_end(){
+          let a =document.getElementById("s1").value;
+          let str=a.trimEnd();
+          var str1=str.length;
+          document.getElementById("result_trim_end").innerHTML="<b>To trim a string: "+str1;
+          }
+
+          function String_repeat(){
+            let a =document.getElementById("s1").value;
+            let b =parseInt(document.getElementById("n8").value);
+            let rep=a.repeat(b);
+            document.getElementById("result_repeat").innerHTML="<b> String repeatation "+rep;
+
+        }
+
+        function String_replace(){
+            let a =document.getElementById("s1").value;
+            let b =document.getElementById("s3").value;
+            let c =document.getElementById("s4").value;
+            let str=a.replace(b,c);
+            document.getElementById("result_replace").innerHTML="<b> String replace: "+str;
+
+        }
+
+        function String_replace_all(){
+            let a =document.getElementById("s1").value;
+            let b =document.getElementById("s5").value;
+            let c =document.getElementById("s6").value;
+            let str=a.replaceAll(b,c);
+            document.getElementById("result_replace_all").innerHTML="<b> String replaceall: "+str;
+
+        }
+
+        function String_split(){
+            let a =document.getElementById("s1").value;
+            let l=a.split(" ");
+            document.getElementById("result_split").innerHTML="<b> split the string: "+l;
+
+        }
+
+    </script>
+
+    <style>
+        h3{
+            color: goldenrod;
+        }
+        b{
+            color:indianred;
+            font-size: 20px;
+        }
+    </style>
+
+
+
+
+</head>
+<body>
+    <h3>String length</h3>
+    Enter the String: <input type="text" required id="s1">
+       <br> <br>
+    <button onclick="String_length()">String_length</button>
+    <br><br>
+    <div id="result_str"></div>
+    <br><br>
+   
+    <h3>String Charat</h3>
+    Enter the value: <input type="text" required id="n1">
+    <br>
+    <br>
+    <button onclick="String_charAt()">String_charAt</button><br><br>
+    <div id="result_char"></div>
+    <br><br>
+    
+    <h3>String Slice</h3>
+   Enter the value: <input type="text" required id="n2">&nbsp;&nbsp;&nbsp;&nbsp;
+   Enter the value: <input type="text" required id="n3">
+   <br> <br>
+   <button onclick="String_slice()">String_slice</button>
+   <br><br>
+     <div id="result_slice"></div>
+     <br><br>
+
+     <h3>String Substring</h3>
+   Enter the value: <input type="text" required id="n4">&nbsp;&nbsp;&nbsp;&nbsp;
+   Enter the value: <input type="text" required id="n5">
+   <br> <br>
+   <button onclick="String_sub()">String_substring</button>
+   <br><br>
+     <div id="result_sub"></div>
+     <br><br>
+
+
+     <h3>String substr</h3>
+   Enter the value: <input type="text" required id="n6">&nbsp;&nbsp;&nbsp;&nbsp;
+   Enter the value: <input type="text" required id="n7">
+   <br> <br>
+   <button onclick="String_str()">String_str</button>
+   <br><br>
+     <div id="result_substr"></div>
+     <br><br>
+
+     <h3>Conver to UpperCase</h3>
+     <button onclick="String_upper()">String_upper</button>
+     <br><br>
+       <div id="result_upper"></div>
+       <br>
+
+       <h3>Conver to LowerCase</h3>
+     <button onclick="String_lower()">String_lower</button>
+     <br><br>
+       <div id="result_lower"></div>
+       <br>
+
+       <h3>String concat</h3>
+       Enter the String: <input type="text" required id="s2">
+       <br> <br>
+    <button onclick="String_concat()">String_concat</button>
+    <br><br>
+    <div id="result_concat"></div>
+    <br><br>
+
+    <h3>To trim a string</h3>
+     <button onclick="String_trim()">String_trim</button>
+     <br><br>
+       <div id="result_trim"></div>
+       <br>
+
+       <h3>Trim_Start</h3>
+     <button onclick="String_trim_start()">String_trim</button>
+     <br><br>
+       <div id="result_trim_start"></div>
+       <br>
+
+       <h3>Trim_End</h3>
+     <button onclick="String_trim_end()">String_trim</button>
+     <br><br>
+       <div id="result_trim_end"></div>
+       <br>
+
+
+       <h3>String repeat</h3>
+    Enter the value: <input type="text" required id="n8">
+    <br>
+    <br>
+    <button onclick="String_repeat()">String_repeat</button><br><br>
+    <div id="result_repeat"></div>
+    <br><br>
+
+    <h3>String replace</h3>
+    Enter the value: <input type="text" required id="s3">&nbsp;&nbsp;&nbsp;&nbsp;
+    Enter the value: <input type="text" required id="s4">
+    <br>
+    <br>
+    <button onclick="String_replace()">String_replace</button><br><br>
+    <div id="result_replace"></div>
+    <br><br>
+
+    <h3>String replace All</h3>
+    Enter the value: <input type="text" required id="s5">&nbsp;&nbsp;&nbsp;&nbsp;
+    Enter the value: <input type="text" required id="s6">
+    <br>
+    <br>
+    <button onclick="String_replace_all()">String_replaceall</button><br><br>
+    <div id="result_replace_all"></div>
+    <br><br>
+
+    <h3>String splits</h3>
+    <button onclick="String_split()">String_split</button>
+    <br><br>
+    <div id="result_split"></div>
+    <br><br>
+   
+
+
+
+</body>
+</html>
