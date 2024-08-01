@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { CalculatorService } from './calculator.service';
+import { FactorialService } from './factorial.service';
 
 @Component({
   selector: 'app-root',
@@ -68,9 +69,15 @@ import { CalculatorService } from './calculator.service';
 }*/
 export class AppComponent {
 
-  sum : number;
-  constructor(private calc : CalculatorService){
+ // sum : number;
+  fact:number;
+ /* constructor(private calc : CalculatorService){
     this.sum = calc.getAddition(10,30);
+    
+
+  }*/
+  constructor(private calc : FactorialService){
+    this.fact = calc.getFactorial(5);
     
 
   }

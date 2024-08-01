@@ -10,6 +10,7 @@ import { ContactComponent } from './contact/contact.component';
 import { AboutComponent } from './about/about.component';
 import { RouterModule,Routes } from '@angular/router';
 import { CalculatorService } from './calculator.service';
+import { FactorialService } from './factorial.service';
 
 const ROUTES: Routes = [
 
@@ -36,6 +37,7 @@ const ROUTES: Routes = [
   ],
   providers: [
     CalculatorService,
+    FactorialService
   ],
   bootstrap: [AppComponent]
 })

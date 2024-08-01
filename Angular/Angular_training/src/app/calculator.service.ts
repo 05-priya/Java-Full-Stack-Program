@@ -15,4 +15,6 @@ export class CalculatorService {
   getDivision(a : number,b : number){
     return a/b;  
   }
+  
+
 }
